@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+canvas {
+  border: 1px solid black;
+  background-color: #f0f0f0;
+}
+.next-piece {
+  margin-top: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.prediction {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 0.8em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+canvas {
+  border: 1px solid black;
+}
+#container {
+  display: flex;
+  align-items: flex-start;
+}
+#tetris {
+  margin-right: 20px;
+}
