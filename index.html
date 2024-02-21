@@ -8,23 +8,21 @@
   </head>
   <body>
     <div id="container">
-      <canvas id="tetris" width="240" height="400"></canvas>
       <div id="sidePanel">
         <p>Hold Piece:</p>
         <canvas id="holdPieceCanvas" width="80" height="80"></canvas>
+        <canvas id="nextPieceCanvas" width="80" height="80"></canvas>
+      </div>
+      <canvas id="tetris" width="240" height="400"></canvas>
+      <div class="button-container">
+        <button class="button" id="rotateButton">↻</button>
+        <button class="button" id="leftButton">←</button>
+        <button class="button" id="downButton">↓</button>
+        <button class="button" id="rightButton">→</button>
+        <button class="button" id="holdButton">Hold</button>
       </div>
     </div>
-    <div class="next-piece">
-      <canvas id="nextPieceCanvas" width="80" height="80"></canvas>
-    </div>
     <div class="prediction" id="prediction"></div>
-    <div class="button-container">
-      <button class="button" id="rotateButton">↻</button>
-      <button class="button" id="leftButton">←</button>
-      <button class="button" id="downButton">↓</button>
-      <button class="button" id="rightButton">→</button>
-      <button class="button" id="holdButton">Hold</button>
-    </div>
     <script src="main.js"></script>
   </body>
 </html>
