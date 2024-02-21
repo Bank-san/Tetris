@@ -58,24 +58,28 @@ canvas {
   margin: 10px;
 }
 
-#String {
+.String {
   margin: 10px;
 }
 
 @media (max-width: 600px) {
   #container {
-    flex-direction: column;
+    flex-direction: column; /* コンテナ内の要素を縦に配置 */
+    align-items: center; /* 要素を中央揃え */
   }
 
   #sidePanel {
-    width: calc(50% - 10px); /* 50% 幅で左右に配置、間隔を空ける */
+    width: calc(
+      100% - 20px
+    ); /* サイドパネルの幅を100%にして、左右に10pxの余白を持たせる */
     margin: 10px;
-
     display: flex;
+    justify-content: center; /* 中央揃え */
   }
 
   .button-container {
     flex-direction: row; /* ボタンを横並びに */
-    margin-top: 10px; /* 上の間隔 */
+    margin-top: 10px; /* 上の余白 */
+    justify-content: center; /* ボタンを中央揃え */
   }
 }
