@@ -5,6 +5,7 @@ body {
   align-items: flex-start;
   height: 100vh;
   margin: 0;
+  touch-action: manipulation;
 }
 
 canvas {
