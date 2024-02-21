@@ -300,3 +300,39 @@ document.addEventListener("DOMContentLoaded", function () {
     draw();
   }, 30);
 });
+
+// ボタン要素を取得
+const leftButton = document.getElementById("leftButton");
+const rightButton = document.getElementById("rightButton");
+const upButton = document.getElementById("upButton");
+const downButton = document.getElementById("downButton");
+const rotateButton = document.getElementById("rotateButton");
+const holdButton = document.getElementById("holdButton");
+
+// クリックイベントリスナーを追加
+leftButton.addEventListener("click", moveLeft);
+rightButton.addEventListener("click", moveRight);
+upButton.addEventListener("click", moveUp);
+downButton.addEventListener("click", moveDown);
+rotateButton.addEventListener("click", rotatePiece);
+holdButton.addEventListener("click", holdPiece);
+
+// タッチイベントリスナーを追加
+leftButton.addEventListener("touchstart", moveLeft);
+rightButton.addEventListener("touchstart", moveRight);
+upButton.addEventListener("touchstart", moveUp);
+downButton.addEventListener("touchstart", moveDown);
+rotateButton.addEventListener("touchstart", rotatePiece);
+holdButton.addEventListener("touchstart", holdPiece);
+
+// タッチイベントのデフォルト動作を防止
+function preventZoom(event) {
+  event.preventDefault();
+}
+
+leftButton.addEventListener("touchmove", preventZoom);
+rightButton.addEventListener("touchmove", preventZoom);
+upButton.addEventListener("touchmove", preventZoom);
+downButton.addEventListener("touchmove", preventZoom);
+rotateButton.addEventListener("touchmove", preventZoom);
+holdButton.addEventListener("touchmove", preventZoom);
