@@ -54,17 +54,21 @@ canvas {
   font-size: 18px;
   cursor: pointer;
 }
+#nextPieceCanvas {
+  margin: 0 10px;
+}
 
 @media (max-width: 600px) {
   #container {
     flex-direction: column;
   }
 
-  .next-piece,
   #sidePanel {
     width: calc(50% - 10px); /* 50% 幅で左右に配置、間隔を空ける */
     margin-right: 10px; /* 間隔 */
     margin-bottom: 10px; /* 下の間隔 */
+    margin-top: 10px;
+    display: flex;
   }
 
   .button-container {
