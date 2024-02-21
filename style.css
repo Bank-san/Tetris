@@ -5,7 +5,7 @@ body {
   align-items: flex-start;
   height: 100vh;
   margin: 0;
-  touch-action: manipulation;
+  touch-action: manipulation; /* タッチ操作のマニピュレーションを有効にする */
 }
 
 canvas {
@@ -29,10 +29,6 @@ canvas {
   margin-left: 5px;
 }
 
-canvas {
-  border: 1px solid black;
-}
-
 #container {
   display: flex;
   align-items: flex-start;
@@ -40,7 +36,7 @@ canvas {
 }
 
 #tetris {
-  margin: 20px;
+  margin: 20px; /* 余白を20pxに変更 */
 }
 
 .button-container {
@@ -55,6 +51,7 @@ canvas {
   font-size: 18px;
   cursor: pointer;
 }
+
 #nextPieceCanvas {
   margin: 10px;
 }
