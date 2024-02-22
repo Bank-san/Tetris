@@ -12,8 +12,9 @@
   <body>
     <div class="audio_wrap">
       <div class="audio_button"></div>
-      <audio id="audio" src="audio/Tetris.mp3" loop>
-        あなたのブラウザーは <code>audio</code> 要素をサポートしていません。
+      <audio id="bgmPlayer" autoplay loop>
+        <source src="./Tetris.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
       </audio>
     </div>
     <div id="container">

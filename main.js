@@ -352,3 +352,6 @@ $(function () {
     }
   });
 });
+
+const audio = document.getElementById("audio");
+audio.play();
