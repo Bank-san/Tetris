@@ -47,8 +47,7 @@ canvas {
 
 .button {
   width: 48px;
-  height: 24px;
-  margin: 4px;
+  height: 32px;
   font-size: 16px;
   cursor: pointer;
 }
@@ -97,4 +96,6 @@ canvas {
 .sub-button {
   flex-direction: row; /* ボタンを横並びに */
   justify-content: center; /* ボタンを中央揃え */
+  height: 28px;
+  width: 64px;
 }
