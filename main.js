@@ -241,6 +241,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const leftButton = document.getElementById("leftButton");
   const rightButton = document.getElementById("rightButton");
   const downButton = document.getElementById("downButton");
+  const upButton = document.getElementById("upButton");
+
   const holdButton = document.getElementById("holdButton");
 
   rotateButton.addEventListener("click", function () {
@@ -259,6 +261,13 @@ document.addEventListener("DOMContentLoaded", function () {
     drop();
   });
 
+  upButton.addEventListener("click", function () {
+    while (!collide(board, pieces[currentPieceIndex], currentX, currentY + 1)) {
+      currentY++;
+    }
+    drop();
+  });
+
   holdButton.addEventListener("click", function () {
     holdPiece();
   });
@@ -273,6 +282,9 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       case "ArrowDown":
         drop();
+        break;
+      case "ArrowUp":
+        instantDrop();
         break;
       case "Shift":
         rotatePiece();
