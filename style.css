@@ -46,10 +46,10 @@ canvas {
 }
 
 .button {
-  width: 50px;
-  height: 50px;
-  margin: 10px;
-  font-size: 18px;
+  width: 48px;
+  height: 24px;
+  margin: 4px;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -81,4 +81,20 @@ canvas {
     margin-top: 10px; /* 上の余白 */
     justify-content: center; /* ボタンを中央揃え */
   }
+}
+
+.overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.sub-button {
+  flex-direction: row; /* ボタンを横並びに */
+  justify-content: center; /* ボタンを中央揃え */
 }

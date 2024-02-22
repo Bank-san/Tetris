@@ -8,6 +8,34 @@ document.addEventListener("DOMContentLoaded", function () {
   const boardHeight = 20;
   const board = [];
 
+  let isPaused = false; // ゲームのポーズ状態を管理する変数
+  let gameInterval; // ゲームのメインループのインターバル
+
+  function togglePause() {
+    isPaused = !isPaused; // ポーズ状態の反転
+    const pauseOverlay = document.getElementById("pauseOverlay");
+    if (isPaused) {
+      pauseOverlay.style.display = "block"; // ポーズ中の表示を表示する
+      // ゲームを一時停止する処理を追加
+      clearInterval(gameInterval); // ゲームのメインループを停止
+      // その他、必要な一時停止処理を追加する
+    } else {
+      pauseOverlay.style.display = "none"; // ポーズ中の表示を非表示にする
+      // ゲームを再開する処理を追加
+      gameInterval = setInterval(updateGame, 1000 / 60); // ゲームのメインループを再開
+      // その他、必要な再開処理を追加する
+    }
+  }
+
+  // ゲームのメインループ関数
+  function updateGame() {
+    // ゲームの更新処理を記述する
+  }
+
+  // ポーズボタンのクリックイベントリスナーを追加
+  const pauseButton = document.getElementById("pauseButton");
+  pauseButton.addEventListener("click", togglePause);
+
   for (let row = 0; row < boardHeight; row++) {
     board[row] = [];
     for (let col = 0; col < boardWidth; col++) {
@@ -120,9 +148,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function drop() {
-    if (!collide(board, pieces[currentPieceIndex], currentX, currentY + 1)) {
+    if (
+      !isPaused &&
+      !collide(board, pieces[currentPieceIndex], currentX, currentY + 1)
+    ) {
       currentY++;
-    } else {
+    } else if (!isPaused) {
       merge();
       clearLines();
       currentPieceIndex = nextPieceIndex;
@@ -131,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
       currentY = 0;
       if (collide(board, pieces[currentPieceIndex], currentX, currentY)) {
         // Game over
-        alert("Game Over");
+        alert("You are an idiot\n☺ ☺ ☺ ☺ ☺ ☺ ☺");
         board.forEach((row) => row.fill(0));
       }
     }
@@ -367,3 +398,19 @@ $(function () {
 
 const audio = document.getElementById("audio");
 audio.play();
+
+function togglePause() {
+  isPaused = !isPaused;
+  const pauseOverlay = document.getElementById("pauseOverlay");
+  if (isPaused) {
+    pauseOverlay.style.display = "block"; // ポーズ中の表示を表示する
+    // ゲームを一時停止する処理を追加
+    clearInterval(gameInterval); // ゲームのメインループを停止
+    // その他、必要な一時停止処理を追加する
+  } else {
+    pauseOverlay.style.display = "none"; // ポーズ中の表示を非表示にする
+    // ゲームを再開する処理を追加
+    gameInterval = setInterval(updateGame, 1000 / 60); // ゲームのメインループを再開
+    // その他、必要な再開処理を追加する
+  }
+}

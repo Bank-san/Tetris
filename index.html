@@ -10,6 +10,10 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
+    <div id="pauseOverlay" class="overlay">
+      <p>ポーズ中</p>
+    </div>
+
     <div class="audio_wrap">
       <div class="audio_button"></div>
       <audio id="bgmPlayer" autoplay loop>
@@ -28,16 +32,20 @@
         </div>
         <canvas id="nextPieceCanvas" width="80" height="80"></canvas>
       </div>
-      <div id="score">Score: 0</div>
-
+      <div id="score">
+        Score: 0
+        <button id="pauseButton">Pause</button>
+      </div>
       <canvas id="tetris" width="240" height="400"></canvas>
+      <div id="sub-button-container">
+        <button class="sub-button" id="rotateButton">↻</button>
+        <button class="sub-button" id="holdButton">Hold</button>
+      </div>
       <div class="button-container">
-        <button class="button" id="rotateButton">↻</button>
-        <button class="button" id="leftButton">←</button>
         <button class="button" id="downButton">↓</button>
-        <button class="button" id="upButton">↑</button>
+        <button class="button" id="leftButton">←</button>
         <button class="button" id="rightButton">→</button>
-        <button class="button" id="holdButton">Hold</button>
+        <button class="button" id="upButton">⬇︎</button>
       </div>
     </div>
     <div class="prediction" id="prediction"></div>
