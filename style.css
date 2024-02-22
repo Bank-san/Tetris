@@ -20,7 +20,7 @@ canvas {
 }
 
 .prediction {
-  color: rgba(0, 0, 0, 0.3);
+  color: #0000004d;
   font-size: 0.8em;
   position: absolute;
   top: 0;
@@ -42,6 +42,7 @@ canvas {
 .button-container {
   flex-direction: row; /* ボタンを横並びに */
   margin-top: 10px; /* 上の間隔 */
+  user-select: none;
 }
 
 .button {
