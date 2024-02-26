@@ -1,54 +1,22 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <title>Tetris</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetris Start Page</title>
+    <link rel="stylesheet" href="start.css" />
   </head>
   <body>
-    <div id="pauseOverlay" class="overlay">
-      <p>ポーズ中</p>
+    <div class="start-page">
+      <div class="logo">
+        <img src="tetris.png" alt="Tetris Logo" />
+      </div>
+      <div class="menu">
+        <button id="startButton" class="menu-item selected">Start</button>
+        <button id="configButton" class="menu-item">Config</button>
+      </div>
     </div>
 
-    <div class="audio_wrap">
-      <div class="audio_button"></div>
-      <audio id="bgmPlayer" autoplay loop>
-        <source src="./Tetris.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-    <div id="container">
-      <div id="sidePanel">
-        <div class="String">
-          <p>Hold Piece:</p>
-        </div>
-        <canvas id="holdPieceCanvas" width="80" height="80"></canvas>
-        <div class="String">
-          <p>Next Piece:</p>
-        </div>
-        <canvas id="nextPieceCanvas" width="80" height="80"></canvas>
-      </div>
-      <div id="score">
-        Score: 0
-        <button id="pauseButton">Pause</button>
-      </div>
-      <canvas id="tetris" width="240" height="400"></canvas>
-      <div id="sub-button-container">
-        <button class="sub-button" id="rotateButton">↻</button>
-        <button class="sub-button" id="holdButton">Hold</button>
-      </div>
-      <div class="button-container">
-        <button class="button" id="downButton">↓</button>
-        <button class="button" id="leftButton">←</button>
-        <button class="button" id="rightButton">→</button>
-        <button class="button" id="upButton">⬇︎</button>
-      </div>
-    </div>
-    <div class="prediction" id="prediction"></div>
-    <script src="main.js"></script>
+    <script src="start.js"></script>
   </body>
 </html>
