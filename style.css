@@ -31,8 +31,9 @@ canvas {
 
 #container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   position: relative;
+  flex-direction: column;
 }
 
 #tetris {
@@ -60,19 +61,19 @@ canvas {
   margin: 10px;
 }
 
+#sidePanel {
+  width: calc(
+    100% - 20px
+  ); /* サイドパネルの幅を100%にして、左右に10pxの余白を持たせる */
+  margin: 10px;
+  display: flex;
+  justify-content: center; /* 中央揃え */
+  align-items: center;
+}
 @media (max-width: 600px) {
   #container {
     flex-direction: column; /* コンテナ内の要素を縦に配置 */
     align-items: center; /* 要素を中央揃え */
-  }
-
-  #sidePanel {
-    width: calc(
-      100% - 20px
-    ); /* サイドパネルの幅を100%にして、左右に10pxの余白を持たせる */
-    margin: 10px;
-    display: flex;
-    justify-content: center; /* 中央揃え */
   }
 
   .button-container {
