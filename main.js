@@ -402,13 +402,16 @@ audio.play();
 function togglePause() {
   isPaused = !isPaused;
   const pauseOverlay = document.getElementById("pauseOverlay");
+  const container = document.getElementById("container");
   if (isPaused) {
     pauseOverlay.style.display = "block"; // ポーズ中の表示を表示する
+    container.classList.add(paused);
     // ゲームを一時停止する処理を追加
     clearInterval(gameInterval); // ゲームのメインループを停止
     // その他、必要な一時停止処理を追加する
   } else {
     pauseOverlay.style.display = "none"; // ポーズ中の表示を非表示にする
+
     // ゲームを再開する処理を追加
     gameInterval = setInterval(updateGame, 1000 / 60); // ゲームのメインループを再開
     // その他、必要な再開処理を追加する
