@@ -176,7 +176,7 @@ canvas {
 }
 
 #rotateButton:hover {
-  background-color: #acaeb4; /* ホバー時の背景色を少し濃い緑に変更 */
+  background-color: #acaeb4;
 }
 
 #holdButton {
