@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
       currentY = 0;
       if (collide(board, pieces[currentPieceIndex], currentX, currentY)) {
         // Game over
-        alert("You are an idiot\n☺ ☺ ☺ ☺ ☺ ☺ ☺");
+        alert("Game Over");
         board.forEach((row) => row.fill(0));
       }
     }
