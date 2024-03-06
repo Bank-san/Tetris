@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let isPaused = false; // ゲームのポーズ状態を管理する変数
   let gameInterval; // ゲームのメインループのインターバル
 
+  audioElement.play();
+
   function togglePause() {
     isPaused = !isPaused; // ポーズ状態の反転
     const pauseOverlay = document.getElementById("pauseOverlay");
