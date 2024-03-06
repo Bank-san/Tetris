@@ -40,18 +40,18 @@ canvas {
   margin: 20px; /* 余白を20pxに変更 */
 }
 
-.button-container {
-  flex-direction: row; /* ボタンを横並びに */
-  margin-top: 10px; /* 上の間隔 */
+/* .button-container {
+  flex-direction: row; 
+  margin-top: 10px; 
   user-select: none;
-}
+} */
 
-.button {
+/* .button {
   width: 48px;
   height: 32px;
   font-size: 16px;
   cursor: pointer;
-}
+} */
 
 #nextPieceCanvas {
   margin: 10px;
@@ -99,4 +99,57 @@ canvas {
   justify-content: center; /* ボタンを中央揃え */
   height: 28px;
   width: 64px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* 上の余白を増やす */
+}
+
+.button {
+  width: 48px;
+  height: 48px; /* ボタンの高さを増やす */
+  font-size: 18px; /* フォントサイズを大きくする */
+  background-color: #f0f0f0; /* ボタンの背景色を緑に */
+  color: rgb(0, 0, 0); /* ボタンの文字色を白に */
+  border-radius: 8px; /* ボタンの角を丸くする */
+  margin: 5px; /* ボタンの間隔を調整 */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* ホバー時のトランジションを追加 */
+}
+
+.button:hover {
+  background-color: #acaeb4; /* ホバー時の背景色を少し濃い緑に変更 */
+}
+
+#rotateButton {
+  background-color: #f0f0f0; /* 回転ボタンの背景色を青に */
+  border-radius: 8px;
+  color: rgb(0, 0, 0); /* ボタンの文字色を白に */
+}
+
+#rotateButton:hover {
+  background-color: #acaeb4; /* ホバー時の背景色を少し濃い緑に変更 */
+}
+
+#holdButton {
+  background-color: #f0f0f0; /* ホールドボタンの背景色を青に */
+  color: rgb(0, 0, 0); /* ボタンの文字色を白に */
+  border-radius: 8px;
+}
+
+#holdButton:hover {
+  background-color: #acaeb4; /* ホバー時の背景色を少し濃い緑に変更 */
+}
+
+#pauseButton {
+  background-color: #f0f0f0; /* ホールドボタンの背景色を青に */
+  color: rgb(0, 0, 0); /* ボタンの文字色を白に */
+  border-radius: 8px;
+}
+
+#pauseButton:hover {
+  background-color: #acaeb4; /* ホバー時の背景色を少し濃い緑に変更 */
 }
