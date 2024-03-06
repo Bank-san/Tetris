@@ -241,6 +241,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let heldPiece = null;
 
+  function instantDrop() {
+    while (!collide(board, pieces[currentPieceIndex], currentX, currentY + 1)) {
+      currentY++;
+    }
+    drop();
+  }
+
   function holdPiece() {
     if (heldPiece === null) {
       heldPiece = pieces[currentPieceIndex];
@@ -296,7 +303,7 @@ document.addEventListener("DOMContentLoaded", function () {
     while (!collide(board, pieces[currentPieceIndex], currentX, currentY + 1)) {
       currentY++;
     }
-    drop();
+    instantDrop();
   });
 
   holdButton.addEventListener("click", function () {
@@ -314,8 +321,8 @@ document.addEventListener("DOMContentLoaded", function () {
       case "ArrowDown":
         drop();
         break;
-      case "ArrowUp":
-        instantDrop();
+      case "ArrowUp": // 上キーが押された場合
+        instantDrop(); // instantDrop 関数を呼び出す
         break;
       case "Shift":
         rotatePiece();
