@@ -23,8 +23,9 @@
     </div>
 
     <div class="audio_wrap">
-      <div class="audio_button"></div>
-      <audio id="bgmPlayer" autoplay loop>
+      <div class="audio_button" onclick="playBGM()"></div>
+      <!-- オーディオタグはここではautoplayを削除しています -->
+      <audio id="bgmPlayer" loop>
         <source src="./Tetris.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
@@ -58,5 +59,11 @@
     </div>
     <div class="prediction" id="prediction"></div>
     <script src="main.js"></script>
+    <script>
+      function playBGM() {
+        var audio = document.getElementById("bgmPlayer");
+        audio.play();
+      }
+    </script>
   </body>
 </html>
